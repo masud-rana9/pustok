@@ -1,3 +1,5 @@
+"use client";
+
 import AppButton from "@/components/ui/AppButton";
 import Image from "next/image";
 
