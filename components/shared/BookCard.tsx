@@ -22,7 +22,7 @@ const BookCard = ({
   category,
 }: TBook) => {
   return (
-    <div className=" bg-white rounded-md shadow-lg w-96 p-5 text-center cursor-pointer hover:bg-slate-400">
+    <div className=" bg-white rounded-md shadow-lg w-96 p-5 text-center cursor-pointer hover:bg-slate-100">
       <Image
         height={350}
         width={350}
