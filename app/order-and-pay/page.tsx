@@ -32,7 +32,7 @@ const Page = () => {
     <div className="container mx-auto my-40">
       <div className="bg-white rounded-lg shadow-md py-5">
         <div className="  w-1/2 mx-auto my-10 ">
-          <h1 className="text-textColor text-center border-b  text-3xl py-5 font-semibold">
+          <h1 className="font-bold text-4xl border-b pb-5 text-gray-800 text-center tracking-wide leading-tight">
             {" "}
             Give your information if you want to buy or take books!
           </h1>

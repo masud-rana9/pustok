@@ -64,7 +64,7 @@ const AddToCard = () => {
         </div>
       </div>
       <AppButton
-        label="Procced To checkOUt"
+        label="Procced To checkout"
         className=" mt-5"
         href="/order-and-pay"
       />
