@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import CategoryTitle from "@/components/shared/CategoryTitle";
 import BookCard from "@/components/shared/BookCard";
 
-const Store = () => {
+const FreeBooks = () => {
   const items = [
     {
       id: 1,
@@ -113,36 +113,12 @@ const Store = () => {
   ];
 
   return (
-    <div className="container mx-auto my-40 bg-white p-10 flex gap-10 rounded-lg border-t-2 border-green-700 ">
-      <div className="border-r pr-10">
-        <h1 className="text-3xl font-semibold mb-10 ">
-          Category <hr className="text-3xl mt-3" />
-        </h1>
-        <div className="text-xl text-textColor space-y-3 border rounded-lg p-5 cursor-pointer">
-          <p>Bestsellers</p>
-          <hr />
-          <p>Bestsellers</p>
-          <hr />
-          <p>Bestsellers</p>
-          <hr />
-          <p>Bestsellers</p>
-          <hr />
-          <p>Bestsellers</p>
-          <hr />
-          <p>Bestsellers</p>
-          <hr />
-          <p>Bestsellers</p>
-          <hr />
-          <p>Bestsellers</p>
-          <hr />
-          <p>Bestsellers</p>
-        </div>
-      </div>
+    <div className="container mx-auto my-40 bg-white p-10 rounded-lg border-t-2 border-green-700 ">
       <div>
         <h1 className="text-3xl font-semibold mb-10 ">
-          Book Store <hr className="text-3xl mt-3" />{" "}
+          Free & Exchangeable books <hr className="text-3xl mt-3" />
         </h1>
-        <div className="grid lg:grid-cols-3 grid-cols-1 gap-10">
+        <div className="grid lg:grid-cols-4 grid-cols-1 gap-5">
           {items.map((book) => (
             <BookCard {...book} key={book.id} />
           ))}
@@ -152,4 +128,4 @@ const Store = () => {
   );
 };
 
-export default Store;
+export default FreeBooks;

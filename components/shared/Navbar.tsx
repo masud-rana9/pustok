@@ -13,6 +13,7 @@ import { useEffect, useState } from "react";
 // import { FaBars, FaTimes } from "react-icons/fa";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { TbBrandBitbucket } from "react-icons/tb";
 // import AvatarComponent from "../home/AvatarComponent";
 
 const Navbar = () => {
@@ -49,16 +50,16 @@ const Navbar = () => {
       link: "/books",
     },
     {
-      name: "News Feeds",
-      link: "/news-feed",
-    },
-    {
       name: "Contact Us",
-      link: "/contact",
+      link: "/contact-us",
     },
     {
       name: "Register",
       link: "/auth/register",
+    },
+    {
+      name: <TbBrandBitbucket />,
+      link: "/order-and-pay/add-to-card",
     },
   ];
 
@@ -102,9 +103,9 @@ const Navbar = () => {
             {/* {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />} */}
           </button>
         </div>
-        <div className="hidden md:flex justify-center items-center gap-10  text-[16px]">
+        <div className="hidden md:flex justify-center items-center gap-10 text-xl">
           {navItems.map((item) => (
-            <Link key={item?.name} href={item?.link}>
+            <Link key={item?.link} href={item?.link}>
               {item.name}
             </Link>
           ))}
@@ -134,7 +135,7 @@ const Navbar = () => {
             </div>
           )} */}
           {navItems.map((item) => (
-            <Link key={item?.name} href={item?.link}>
+            <Link key={item?.link} href={item?.link}>
               <div className="py-2 text-white">{item.name}</div>
             </Link>
           ))}

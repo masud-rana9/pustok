@@ -27,7 +27,7 @@ const page = () => {
         </h3>
         <h3 className="text-2xl mt-2 text-textColor">Price:$688</h3>
         <div className="flex  items-center gap-5 mt-8">
-          <AppButton label="Add to Card" href="/order-and-pay" />
+          <AppButton label="Add to Card" href="/order-and-pay/add-to-card" />
           <AppButton label="Read" variant="outlined" />
         </div>
       </div>
