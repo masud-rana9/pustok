@@ -104,7 +104,7 @@ const Fiction = () => {
 
   return (
     <div className="mb-32">
-      <CategoryTitle title="Romantic Books" />
+      <CategoryTitle title="Fiction" />
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={50}

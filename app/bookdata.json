@@ -1,0 +1,202 @@
+[
+  {
+    "_id": 1,
+    "title": "Gray's Anatomy",
+    "author": "Henry Gray",
+    "year": 1858,
+    "description": "A comprehensive medical text on human anatomy, essential for medical professionals.",
+    "image": "https://example.com/old-medical-books/grays-anatomy.jpg",
+    "category": "Medical Old Books",
+    "price": 45.99
+  },
+  {
+    "_id": 2,
+    "title": "Principles and Practice of Medicine",
+    "author": "William Osler",
+    "year": 1892,
+    "description": "A foundational text for modern medical education, written by one of the pioneers of internal medicine.",
+    "image": "https://example.com/old-medical-books/principles-practice-medicine.jpg",
+    "category": "Medical Old Books",
+    "price": 52.5
+  },
+  {
+    "_id": 3,
+    "title": "Materia Medica",
+    "author": "William Cullen",
+    "year": 1776,
+    "description": "An 18th-century text exploring medicinal substances and their uses.",
+    "image": "https://example.com/old-medical-books/materia-medica.jpg",
+    "category": "Medical Old Books",
+    "price": 30.75
+  },
+  {
+    "_id": 4,
+    "title": "De Humani Corporis Fabrica",
+    "author": "Andreas Vesalius",
+    "year": 1543,
+    "description": "A groundbreaking work on human anatomy, introducing detailed illustrations and scientific methodology.",
+    "image": "https://example.com/old-medical-books/de-humani.jpg",
+    "category": "Medical Old Books",
+    "price": 85.0
+  },
+  {
+    "_id": 5,
+    "title": "The Canon of Medicine",
+    "author": "Avicenna",
+    "year": 1025,
+    "description": "A medical encyclopedia that was a standard text in both Islamic and European medicine for centuries.",
+    "image": "https://example.com/old-medical-books/canon-of-medicine.jpg",
+    "category": "Medical Old Books",
+    "price": 60.99
+  },
+  {
+    "_id": 6,
+    "title": "Introduction to Algorithms",
+    "author": "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein",
+    "year": 2009,
+    "description": "A standard textbook covering a wide range of algorithms in computer science.",
+    "image": "https://example.com/university-textbooks/algorithms.jpg",
+    "category": "University Textbooks",
+    "price": 94.99
+  },
+  {
+    "_id": 7,
+    "title": "Calculus: Early Transcendentals",
+    "author": "James Stewart",
+    "year": 2015,
+    "description": "A comprehensive guide to calculus, widely used in university mathematics courses.",
+    "image": "https://example.com/university-textbooks/calculus.jpg",
+    "category": "University Textbooks",
+    "price": 79.99
+  },
+  {
+    "_id": 8,
+    "title": "Physics for Scientists and Engineers",
+    "author": "Raymond A. Serway, John W. Jewett",
+    "year": 2018,
+    "description": "A university-level textbook that covers physics concepts with practical applications.",
+    "image": "https://example.com/university-textbooks/physics.jpg",
+    "category": "University Textbooks",
+    "price": 102.5
+  },
+  {
+    "_id": 9,
+    "title": "Organic Chemistry",
+    "author": "Paula Yurkanis Bruice",
+    "year": 2016,
+    "description": "An in-depth guide to organic chemistry, ideal for university students and professionals.",
+    "image": "https://example.com/university-textbooks/organic-chemistry.jpg",
+    "category": "University Textbooks",
+    "price": 89.99
+  },
+  {
+    "_id": 10,
+    "title": "Linear Algebra and Its Applications",
+    "author": "David C. Lay",
+    "year": 2015,
+    "description": "An essential textbook for students learning about linear algebra and its real-world uses.",
+    "image": "https://example.com/university-textbooks/linear-algebra.jpg",
+    "category": "University Textbooks",
+    "price": 64.5
+  },
+  {
+    "_id": 11,
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "year": 1813,
+    "description": "A romantic novel that explores issues of class, marriage, and morality in early 19th-century England.",
+    "image": "https://example.com/literature-classics/pride-and-prejudice.jpg",
+    "category": "Literature Classics",
+    "price": 12.99
+  },
+  {
+    "_id": 12,
+    "title": "Moby-Dick",
+    "author": "Herman Melville",
+    "year": 1851,
+    "description": "An epic tale of obsession and revenge, following Captain Ahab's hunt for the white whale.",
+    "image": "https://example.com/literature-classics/moby-dick.jpg",
+    "category": "Literature Classics",
+    "price": 14.99
+  },
+  {
+    "_id": 13,
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "year": 1925,
+    "description": "A novel about wealth, love, and the American Dream during the Jazz Age.",
+    "image": "https://example.com/literature-classics/great-gatsby.jpg",
+    "category": "Literature Classics",
+    "price": 10.99
+  },
+  {
+    "_id": 14,
+    "title": "Crime and Punishment",
+    "author": "Fyodor Dostoevsky",
+    "year": 1866,
+    "description": "A psychological drama that delves into guilt, redemption, and morality.",
+    "image": "https://example.com/literature-classics/crime-punishment.jpg",
+    "category": "Literature Classics",
+    "price": 16.5
+  },
+  {
+    "_id": 15,
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "year": 1960,
+    "description": "A novel about racial injustice in the Deep South, told through the eyes of a young girl.",
+    "image": "https://example.com/literature-classics/to-kill-a-mockingbird.jpg",
+    "category": "Literature Classics",
+    "price": 14.99
+  },
+  {
+    "_id": 16,
+    "title": "The Rise and Fall of the Third Reich",
+    "author": "William L. Shirer",
+    "year": 1960,
+    "description": "A detailed history of Nazi Germany and its role in World War II.",
+    "image": "https://example.com/historical-books/third-reich.jpg",
+    "category": "Historical Books",
+    "price": 22.5
+  },
+  {
+    "_id": 17,
+    "title": "Guns, Germs, and Steel",
+    "author": "Jared Diamond",
+    "year": 1997,
+    "description": "An exploration of how environmental factors shaped the development of human societies.",
+    "image": "https://example.com/historical-books/guns-germs-steel.jpg",
+    "category": "Historical Books",
+    "price": 18.99
+  },
+  {
+    "_id": 18,
+    "title": "A People's History of the United States",
+    "author": "Howard Zinn",
+    "year": 1980,
+    "description": "A history of the U.S. from the perspective of marginalized and oppressed groups.",
+    "image": "https://example.com/historical-books/peoples-history.jpg",
+    "category": "Historical Books",
+    "price": 19.75
+  },
+  {
+    "_id": 19,
+    "title": "Sapiens: A Brief History of Humankind",
+    "author": "Yuval Noah Harari",
+    "year": 2011,
+    "description": "A history of the human species, from the emergence of Homo sapiens to the modern era.",
+    "image": "https://example.com/historical-books/sapiens.jpg",
+    "category": "Historical Books",
+    "price": 21.99
+  },
+  {
+    "_id": 20,
+    "title": "The History of the Peloponnesian War",
+    "author": "Thucydides",
+    "year": -431,
+    "description": "An ancient Greek account of the conflict between Athens and Sparta.",
+    "image": "https://example.com/historical-books/peloponnesian-war.jpg",
+    "category": "Historical Books",
+    "price": 17.5
+  }
+]

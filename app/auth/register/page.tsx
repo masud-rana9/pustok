@@ -1,8 +1,10 @@
 "use client";
 
+import { AuthContext, AuthInfo } from "@/components/provider/AuthProvider";
 import AppButton from "@/components/ui/AppButton";
 import AppFormInput from "@/components/ui/AppFormInput";
 import Link from "next/link";
+import { useContext } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { FaFacebookF, FaGoogle } from "react-icons/fa";
 
@@ -14,22 +16,32 @@ type Inputs = {
   confirmpassword: string;
 };
 
-const Page = () => {
+const Register = () => {
+  const { createUser } = useContext(AuthContext) as AuthInfo;
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    try {
+      const result = await createUser(data.email, data.password);
+      const user = result.user;
+      console.log(user);
+      alert("regiter successfull");
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
-    <div className="w-[40%] h-[80vh] mx-auto my-40 flex justify-center bg-white rounded-lg shadow-lg p-10">
-      <div className="border px-20 py-5 rounded-lg">
-        <h1 className="text-center mb-10 text-3xl font-semibold border-b pb-5">
-          REGISTER/SIGN IN
-        </h1>
+    <div className="w-[40%] h-[55vh] mx-auto mt-36  shadow-lg p-10  bg-white rounded-md">
+      <div className="  rounded-lg">
+        <h2 className="font-bold text-4xl pb-5 text-gray-800 text-center tracking-wide leading-tight">
+          Register <span className="text-blue-500 italic">Here!</span>
+        </h2>
 
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} className="">
           <AppFormInput
             name="name"
             placeholder="Name"
@@ -46,7 +58,7 @@ const Page = () => {
           />
           <AppFormInput
             name="email"
-            placeholder="Email or Phone"
+            placeholder="Email"
             register={register}
             error={errors.email}
             type="email"
@@ -58,17 +70,10 @@ const Page = () => {
             error={errors.password}
             type="password"
           />
-          <AppFormInput
-            name="confirmpassword"
-            placeholder="Conforim Password"
-            register={register}
-            error={errors.confirmpassword}
-            type="password"
-          />
 
           <AppButton label="Submit" className="mt-5 w-full " type="submit" />
         </form>
-        <p className="text-textColor mt-3  text-center">
+        <p className="text-textColor mt-3  text-center italic">
           Have an account?
           <Link href="/auth/login" className="text-primary">
             login
@@ -79,4 +84,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default Register;

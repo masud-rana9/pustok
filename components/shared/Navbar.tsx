@@ -9,21 +9,34 @@ import AppButton from "../ui/AppButton";
 //   selectCurrentUser,
 // } from "@/redux/features/auth/authSlice";
 // import ProfileDetailsPopUp from "../home/ProfileDetailsPopUp";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 // import { FaBars, FaTimes } from "react-icons/fa";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { TbBrandBitbucket } from "react-icons/tb";
+import { AuthContext } from "@/components/provider/AuthProvider";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; // Make sure this is included
+
 // import AvatarComponent from "../home/AvatarComponent";
 
 const Navbar = () => {
   const pathname = usePathname();
-  // const organizer = useAppSelector(selectCurrentOrganizer);
-  // const user = useAppSelector(selectCurrentUser);
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogout = () => {
+    logOut()
+      .then(() => {
+        alert("Logout successful");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [sticky, setSticky] = useState(false);
-  // const dispatch = useAppDispatch();
-  // console.log(user);
+
   useEffect(() => {
     const handleScroll = () => {
       setSticky(window.scrollY > 500);
@@ -46,17 +59,14 @@ const Navbar = () => {
       link: "/",
     },
     {
-      name: "Books",
-      link: "/books",
+      name: "Store",
+      link: "/books/book-store",
     },
     {
       name: "Contact Us",
       link: "/contact-us",
     },
-    {
-      name: "Register",
-      link: "/auth/register",
-    },
+
     {
       name: <TbBrandBitbucket />,
       link: "/order-and-pay/add-to-card",
@@ -103,23 +113,29 @@ const Navbar = () => {
             {/* {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />} */}
           </button>
         </div>
-        <div className="hidden md:flex justify-center items-center gap-10 text-xl">
+        <div className="hidden md:flex justify-center items-center gap-10 text-lg">
           {navItems.map((item) => (
             <Link key={item?.link} href={item?.link}>
               {item.name}
             </Link>
           ))}
         </div>
-        {/* {organizer?.email || user?.email ? (
-          <div className="hidden md:flex items-center gap-4">
-            <ProfileDetailsPopUp />
+        {user?.email || user?.email ? (
+          <div
+            className="hidden md:flex items-center gap-4"
+            onClick={handleLogout}
+          >
+            {user.email}
           </div>
         ) : (
           <div className="hidden md:flex gap-4 cursor-pointer">
-            <AppButton label="Signup" variant="noDesign" href="/auth/sign-up" />
-            <AppButton label="Login" variant="outlined" href="/auth/sign-in" />
+            <AppButton
+              label="Login"
+              variant="noDesignClass"
+              href="/auth/login"
+            />
           </div>
-        )} */}
+        )}
       </div>
       {isMobileMenuOpen && (
         <div className="md:hidden flex flex-col text-white bg-[#171717] pl-8 w-full right-0 absolute pb-4">
